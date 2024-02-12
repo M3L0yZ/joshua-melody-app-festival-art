@@ -26,20 +26,48 @@
 
   /*----- Main -----*/
   main {
-    margin-top: 100px;
+    margin-top: 70px;
+  }
+
+  .btn-primary {
+    background-color: var(--darkgreen);
+  }
+
+  .btn-primary:hover {
+    background-color: white;
+    color: var(--darkgreen);
+  }
+
+  .btn-outline-primary {
+    background-color: white;
+    color: var(--darkgreen);
+    border-color: var(--darkgreen);
+  }
+
+  .btn-outline-primary:hover {
+    background-color: var(--darkgreen);
   }
 
 /*----- Footer -----*/
 footer {
+  display: flex;
+  justify-content: space-between;
     width: 100%;
     height: auto;
     background-color: var(--darkgreen);
     display: flex;
     position: absolute; /*----- À vérifier -----*/
     bottom: 0;
+    padding: 1rem;
+    margin-top: 1rem;
 }
 
 .footer-text {
     color: var(--light);
     font-family: var(--miriam);
+}
+
+.footer-picture {
+  display: flex;
+  justify-content: center;
 }

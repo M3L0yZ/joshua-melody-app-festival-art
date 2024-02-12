@@ -17,7 +17,7 @@ body {
 
 h1, .h1 {
     font-family: var(--inter);
-    color: var(--green);
+    color: var(--darkgreen);
 }
 
 h2, .h2 {
