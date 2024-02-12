@@ -1,0 +1,15 @@
+$light: #EAFEF2;
+$dark: #081C15;
+$primary: #95D5B2;
+$secondary: #52B788;
+$info: #2D6A4F;
+
+$theme-colors: (
+"light": #EAFEF2,
+"dark": #081C15,
+"primary": #95D5B2,
+"secondary": #52B788,
+"info": #2D6A4F
+);
+
+@import '../vendors/bootstrap-5.3.2/scss/bootstrap.scss'
