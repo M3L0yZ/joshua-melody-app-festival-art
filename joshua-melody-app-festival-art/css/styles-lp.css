@@ -1,3 +1,75 @@
-/*----- Styles Généraux -----*/
 
-/*----- Section Hero -----*/
+/*--------------------------------------------------------- 
+# Styles Généraux 
+---------------------------------------------------------*/
+body {
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    background-image: url('../assets/C-3.svg'), linear-gradient(var(--lightgreen), var(--dark));
+    background-size: 75vh, cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+  }
+  
+  nav {
+      background-color: var(--light);
+  }
+  
+  .navbar {
+    font-family: var(--miriamlibre);
+    color: var(--dark);
+  }
+  
+  .logo {
+    width: 40px;
+  }
+  
+  .test {
+    height: 2000px;
+    background-color: #000000;
+  }
+  
+  .pied {
+    color: var(--light);
+    background-color: var(--green);
+    width: 100vw;
+    height: 20vh;
+    display: flex;
+    position: absolute;
+    bottom: 0;
+  }
+  
+  /*---------------------------------------------------------- 
+  # Section Hero  
+  ----------------------------------------------------------*/
+  
+  .hero {
+    display: flex;
+    position: absolute;
+    top: 150px;
+    width: 100%;
+    height: auto;
+  }
+  
+  .h1 {
+    font-size: 70px;
+    color: #000000;
+  }
+  
+  .photo {
+    background-repeat: no-repeat;
+    background-color: #000000;
+    width: 100%;
+    max-width: 350px;
+    aspect-ratio: 5/9;
+    border-radius: 25px;
+  }
+  
+  button {
+    background-color: var(--green);
+    margin-bottom: 10px;
+  }
