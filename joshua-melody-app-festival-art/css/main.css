@@ -1,0 +1,48 @@
+:root {
+    --light: #EAFEF2;
+    --lightgreen: #95D5B2;
+    --green: #52B788;
+    --darkgreen: #2D6A4F;
+    --dark: #081C15;
+    --miriamlibre: 'Miriam Libre', sans-serif;
+    --inter: 'Inter', sans-serif;
+}
+
+/*----- Styles Généraux (temporaire)-----*/
+
+body {
+    font-family: var(--miriamlibre);
+    color: var(--darkgreen);
+}
+
+h1, .h1 {
+    font-family: var(--inter);
+    color: var(--green);
+}
+
+h2, .h2 {
+    font-family: var(--inter);
+    color: var(--dark);
+}
+
+h3, .h3 {
+    font-family: var(--inter);
+    color: var(--dark);
+}
+
+h4, .h4 {
+    font-family: var(--inter);
+    color: var(--dark);
+}
+
+h5, .h5 {
+    font-family: var(--inter);
+    color: var(--dark);
+}
+
+h6, .h6 {
+    font-family: var(--inter);
+    color: var(--dark);
+}
+
+/*----- Section Hero -----*/

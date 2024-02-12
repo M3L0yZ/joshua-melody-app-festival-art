@@ -1,0 +1,45 @@
+/*----- Header/ Navbar -----*/
+.navbar {
+    font-family: var(--miriam);
+    color: var(--light);
+    background-color: var(--darkgreen);
+  }
+
+  .navbar-brand {
+    font-family: var(--miriam);
+    font-size: 30px;
+    display: flex;
+    align-items: flex-start;
+  }
+
+  .logo-nav {
+    width: 40px;
+    margin-left: 6px;
+  }
+
+  .profile-picture {
+    width: 40px;
+    height: 40px;
+    border-radius: 50px;
+    object-fit: cover;
+  }
+
+  /*----- Main -----*/
+  main {
+    margin-top: 100px;
+  }
+
+/*----- Footer -----*/
+footer {
+    width: 100%;
+    height: auto;
+    background-color: var(--darkgreen);
+    display: flex;
+    position: absolute; /*----- À vérifier -----*/
+    bottom: 0;
+}
+
+.footer-text {
+    color: var(--light);
+    font-family: var(--miriam);
+}
