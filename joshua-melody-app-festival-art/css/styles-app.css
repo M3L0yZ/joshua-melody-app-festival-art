@@ -7,24 +7,24 @@
 
 .navbar-brand {
   font-family: var(--miriam);
-  font-size: 30px;
+  font-size: 24px;
   display: flex;
   align-items: flex-start;
 }
 
 .logo-nav {
-  width: 40px;
+  width: 28px;
   margin-left: 6px;
 }
 
 .profile-picture {
-  width: 40px;
-  height: 40px;
+  width: 36px;
+  height: 36px;
   border-radius: 50px;
   object-fit: cover;
 }
 
-/*----- Main -----*/
+/*--------------------------------------- Main -----*/
 main {
   margin-top: 70px;
 }
@@ -33,49 +33,98 @@ main {
   margin-top: 0.5rem;
 }
 
+.form-control {
+  font-size: 12px;
+}
+
 .filtre-bouton {
   margin-top: 0.5rem;
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: hidden;
 }
 
 .btn-primary {
   background-color: var(--darkgreen);
+  font-size: 12px;
 }
 
 .btn-primary:hover {
   background-color: white;
   color: var(--darkgreen);
+  font-size: 12px;
 }
 
 .btn-outline-primary {
   background-color: white;
   color: var(--darkgreen);
   border-color: var(--darkgreen);
+  font-size: 12px;
 }
 
 .btn-outline-primary:hover {
   background-color: var(--darkgreen);
+  font-size: 12px;
 }
 
-/*----- Footer -----*/
+a {
+  text-decoration: none;
+}
+
+.en-vedette {
+  overflow: hidden;
+  margin-bottom: auto;
+}
+
+.card-img-top {
+  width: auto;
+  height: 20vh;
+  object-fit: cover;
+  object-position: center;
+  
+}
+
+.card-title {
+  font-size: 1rem;
+}
+
+.card {
+  font-size: 0.8rem;
+}
+
+.card-body {
+  min-height: 12vh;
+}
+
+.carte-div {
+  margin: -8px;
+}
+
+.div-test {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+/*----------------------------------- Footer -----*/
 footer {
   display: flex;
+  justify-content: center;
   justify-content: space-between;
   width: 100%;
   height: auto;
   background-color: var(--darkgreen);
-  display: flex;
-  position: absolute; /*----- À vérifier -----*/
-  bottom: 0;
   padding: 1rem;
-  margin-top: 1rem;
+  margin-top: auto;
 }
 
 .footer-text {
   color: var(--light);
   font-family: var(--miriam);
+  font-size: 12px;
 }
 
 .footer-picture {
   display: flex;
   justify-content: center;
+  filter: grayscale(100) contrast(100) invert(100);
 }
