@@ -2,7 +2,7 @@
 .navbar {
   font-family: var(--miriam);
   color: var(--light);
-  background-color: var(--darkgreen);
+  background-color: var(--info);
 }
 
 .navbar-brand {
@@ -45,25 +45,25 @@ main {
 }
 
 .btn-primary {
-  background-color: var(--darkgreen);
+  background-color: var(--info);
   font-size: 12px;
 }
 
 .btn-primary:hover {
   background-color: white;
-  color: var(--darkgreen);
+  color: var(--info);
   font-size: 12px;
 }
 
 .btn-outline-primary {
   background-color: white;
-  color: var(--darkgreen);
-  border-color: var(--darkgreen);
+  color: var(--info);
+  border-color: var(--info);
   font-size: 12px;
 }
 
 .btn-outline-primary:hover {
-  background-color: var(--darkgreen);
+  background-color: var(--info);
   font-size: 12px;
 }
 
@@ -112,7 +112,7 @@ footer {
   justify-content: space-between;
   width: 100%;
   height: auto;
-  background-color: var(--darkgreen);
+  background-color: var(--info);
   padding: 1rem;
   margin-top: auto;
 }
