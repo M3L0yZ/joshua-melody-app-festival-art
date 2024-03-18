@@ -1,3 +1,5 @@
+/*--- Swiper application --- */
+
 const swiper = new Swiper('.swiper-filters', {
   direction: 'horizontal',
   loop: false,
@@ -19,4 +21,3 @@ const swiper2 = new Swiper('.swiper-featured-artworks', {
   },
 
 });
-

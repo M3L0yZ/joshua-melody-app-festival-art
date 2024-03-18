@@ -1,3 +1,5 @@
+/* --- Navigation application --- */
+
 const oeuvres = {
   oeuvre01: {
     titre: "Retina",
@@ -88,7 +90,7 @@ function supprimerStorage() {
 
 
 let heart = document.querySelector(".coeur");
-heart.addEventListener("click", () =>{
+heart.addEventListener("click", () => {
   heart.classList.toggle("toggle-on");
 })
 
