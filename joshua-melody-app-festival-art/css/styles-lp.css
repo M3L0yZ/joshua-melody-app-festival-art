@@ -3,7 +3,7 @@
 # Styles Généraux 
 ---------------------------------------------------------*/
 body {
-    min-height: 2000px;
+    min-height: 4000px;
     margin: 0;
     padding: 0;
     background-image: url('../assets/C-3.svg'), linear-gradient(var(--lightgreen), var(--dark));
@@ -56,7 +56,7 @@ body {
   }
   
   .h1 {
-    font-size: 70px;
+    font-size: 4vw;
     color: #000000;
   }
   
@@ -78,15 +78,96 @@ body {
     flex-grow: 1; border: none; margin: 0; padding: 0;
   }
 
+
+
     /*---------------------------------------------------------- 
   # Fonctionnalités  
   ----------------------------------------------------------*/
 
-  .features {
+  .section-features {
     display: flex;
     position: absolute;
-    top: 1000px;
+    top: 115vh;
     width: 100%;
     height: auto;
     background-color: white;
+  }
+
+  .card-deck {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+  }
+  
+  .card {
+    flex: 1 0 auto;
+  }
+
+      /*---------------------------------------------------------- 
+  # Testimonials  
+  ----------------------------------------------------------*/
+  .section-testimonials {
+    display: flex;
+    position: absolute;
+    top: 100vh;
+    width: 100%;
+    height: auto;
+    background-color: white;
+  }
+
+  .testi img {
+    object-fit: cover;
+  }
+
+  .testi img.num-2 {
+    object-fit: cover;
+    object-position: 0 0px;
+  }
+
+  .testi img.num-6 {
+    object-fit: cover;
+    object-position: 0 -40px;
+  }
+
+  .test-img {
+    height: 15vh;
+  }
+
+  i {
+    font-size: 2vw;
+  }
+
+  .testi i {
+    font-size: 2vw;
+  }
+
+
+      /*---------------------------------------------------------- 
+  # FAQ  
+  ----------------------------------------------------------*/
+
+  .section-faq {
+    display: flex;
+    position: absolute;
+    top: 200vh;
+    width: 100%;
+    height: auto;
+    background-color: white;
+  }
+
+      /*---------------------------------------------------------- 
+  # Info-lettre
+  ----------------------------------------------------------*/
+
+  .infolettre {
+    display: flex;
+    position: absolute;
+    top: 250vh;
+    width: 100%;
+    height: auto;
+    background-image: url("../assets/img_lp/bg_1.jpg");
+  }
+
+  .infolettre h2 {
+    color: var(--light);
   }
