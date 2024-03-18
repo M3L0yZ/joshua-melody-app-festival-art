@@ -9,6 +9,7 @@
   <link rel="icon" type="image/x-icon" href="/assets/favicon.png">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
   <link rel="stylesheet" href="../css/main.css">
   <link rel="stylesheet" href="../css/styles-app.css">
 
@@ -67,328 +68,349 @@
         <div class="col-12">
           <div class="d-flex align-items-center small">
             <i class="bi bi-search bi-fw text-muted position-absolute icon-recherche"></i>
-            <input type="text" class="form-control" placeholder="Rechercher une oeuvre, un artiste..." />
+            <input type="text" class="form-control recherche" placeholder="Rechercher une oeuvre, un artiste..." />
           </div>
         </div>
       </div>
     </div>
 
-    <!---
-      <div class="row">
-        <div class="col-12">
-        <ul class="liste-filtre">
-          <li class="filtre-bouton"><button type="button" class="btn btn-primary text-nowrap">Toutes</button></li>
-          <li class="filtre-bouton"><button type="button" class="btn btn-outline-primary text-nowrap">Installations interactives</button></li>
-          <li class="filtre-bouton"><button type="button" class="btn btn-outline-primary text-nowrap">Concert</button></li>
-          <li class="filtre-bouton"><button type="button" class="btn btn-outline-primary text-nowrap">Performances</button></li>
-          <li class="filtre-bouton"><button type="button" class="btn btn-outline-primary text-nowrap">AR / VR</button></li>
-        </ul>
-      </div>
-    </div>-->
-
-
-    <!-- Filtres et boutons - À VÉRIFIER - FAIRE LISTE -->
     <div class="container filtre-bouton">
-      <button type="button" class="btn btn-primary text-nowrap">Toutes</button>
-      <button type="button" class="btn btn-outline-primary text-nowrap">Installations interactives</button>
-      <button type="button" class="btn btn-outline-primary text-nowrap">Concert</button>
-      <button type="button" class="btn btn-outline-primary text-nowrap">Performances</button>
-      <button type="button" class="btn btn-outline-primary text-nowrap">AR / VR</button>
+      <!-- Slider main container -->
+      <div class="swiper swiper-filters">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+          <!-- Slides -->
+          <div class="swiper-slide">
+            <button type="button" class="btn btn-primary text-nowrap">Toutes</button>
+          </div>
+          <div class="swiper-slide">
+            <button type="button" class="btn btn-outline-primary text-nowrap">Installations interactives</button>
+          </div>
+          <div class="swiper-slide">
+            <button type="button" class="btn btn-outline-primary text-nowrap">Concert</button>
+          </div>
+          <div class="swiper-slide">
+            <button type="button" class="btn btn-outline-primary text-nowrap">Performances</button>
+          </div>
+          <div class="swiper-slide">
+            <button type="button" class="btn btn-outline-primary text-nowrap">AR / VR</button>
+          </div>
+          <div class="swiper-slide">
+            <button type="button" class="btn btn-outline-primary text-nowrap">Projections / Immersion</button>
+          </div>
+        </div>
+      </div>
     </div>
+
 
     <!----------------------------------------------------------------------- SECTION 03 - CARTES - EN VEDETTE ---------------------------------------------------------------->
 
-    <div class="container section-cartes" id="cartes-vedette">
-      <div class="row">
-        <h2>En vedette</h2>
+    <div class="container mb-4">
+      <div class="row g-2">
+        <h2 class="mt-2 mb-0">En vedette</h2>
 
-        <!-- Carte 01 -->
-        <!-- Image, titre et source -->
-        <div class="col carte-vedette">
-          <a href="artwork.html" class="card card-block">
-            <img src="../assets/placeholder-temp.png" class="card-img-top">
+        <!--Swiper cartes en vedette-->
 
-            <div class="card-body">
-              <h3 class="card-title">Titre de l'oeuvre</h3>
-              <p>Par Lorem Ipsum, Dolor Sit.</p>
+        <div class="swiper swiper-featured-artworks">
+          <!-- Additional required wrapper -->
+          <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide">
+              <div class="col carte-vedette">
+                <a href="artwork.html" class="card card-block oeuvre"  id="oeuvre01" onclick="detectionOeuvre(this.id)">
+                  <img src="../assets/artworks/retina.jpg" class="card-img-top">
+                  <div class="card-body">
+                    <h3 class="card-title">Retina</h3>
+                    <p class="carte-nom-artiste">Par Herman Kolgen</p><br>
 
-              <!-- Date et heure-->
-              <div class="row info-date">
-                <div class="col-8">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="9" height="9" fill="currentColor"
-                    class="bi bi-calendar-week" viewBox="0 0 16 16">
-                    <path
-                      d="M11 6.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zm-3 0a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zm-5 3a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zm3 0a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5z" />
-                    <path
-                      d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5M1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4z" />
-                  </svg> 12 avril 2024
-                </div>
-                <div class="col-4 text-end">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="9" height="9" fill="currentColor" class="bi bi-clock"
-                    viewBox="0 0 16 16">
-                    <path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71z" />
-                    <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16m7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0" />
-                  </svg> 20h
-                </div>
-              </div><br>
-
-              <!-- Artiste et info -->
-              <div class="row info-artiste">
-                <div class="col-3"><img class="artist-picture" src="../assets/profile_picture_placeholder.jpg">
-                </div>
-                <div class="col-9 text-end lien-info">Plus d'info
-                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor"
-                    class="bi bi-chevron-right" viewBox="0 0 16 16">
-                    <path fill-rule="evenodd"
-                      d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708" />
-                  </svg>
-                </div>
+                    <!-- Date et heure-->
+                    <div class="row info-date">
+                      <div class="col-8">
+                        <i class="bi bi-calendar-week"></i> 12 avril 2024
+                      </div>
+                      <div class="col-4 text-end">
+                        <i class="bi bi-clock"></i> 20h
+                      </div>
+                    </div><br>
+                    <!-- Artiste et info -->
+                    <div class="row info-artiste">
+                      <div class="col-6"><img class="artist-picture" src="../assets/artists/herman_kolgen.jpg">
+                      </div>
+                      <div class="col-6 text-end lien-info">Plus d'info
+                         <i class="bi bi-chevron-right"></i>
+                      </div>
+                    </div>
+                  </div>
+                </a>
               </div>
             </div>
-          </a>
-        </div>
 
-        <!-- Carte 02 -->
-        <!-- Image, titre et source -->
-        <div class="col carte-vedette">
-          <a href="artwork.html" class="card card-block">
-            <img src="../assets/placeholder-temp.png" class="card-img-top">
+            <!-- Slides -->
+            <div class="swiper-slide">
+              <div class="col carte-vedette">
+                <a href="artwork.html" class="card card-block" id="oeuvre02" onclick="detectionOeuvre(this.id)">
+                  <img src="../assets/artworks/house-of-moire.jpg" class="card-img-top">
+                  <div class="card-body">
+                    <h3 class="card-title">House of Moiré</h3>
+                    <p class="carte-nom-artiste">Par C. A. Thompson, M. Edwards</p>
 
-            <div class="card-body">
-              <h3 class="card-title">Titre de l'oeuvre</h3>
-              <p>Par Lorem Ipsum, Dolor Sit.</p>
-
-              <!-- Date et heure-->
-              <div class="row info-date">
-                <div class="col-8">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="9" height="9" fill="currentColor"
-                    class="bi bi-calendar-week" viewBox="0 0 16 16">
-                    <path
-                      d="M11 6.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zm-3 0a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zm-5 3a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zm3 0a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5z" />
-                    <path
-                      d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5M1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4z" />
-                  </svg> 12 avril 2024
-                </div>
-                <div class="col-4 text-end">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="9" height="9" fill="currentColor" class="bi bi-clock"
-                    viewBox="0 0 16 16">
-                    <path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71z" />
-                    <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16m7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0" />
-                  </svg> 20h
-                </div>
-              </div><br>
-
-              <!-- Artiste et info -->
-              <div class="row info-artiste">
-                <div class="col-3"><img class="artist-picture" src="../assets/profile_picture_placeholder.jpg">
-                </div>
-                <div class="col-9 text-end lien-info">Plus d'info
-                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor"
-                    class="bi bi-chevron-right" viewBox="0 0 16 16">
-                    <path fill-rule="evenodd"
-                      d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708" />
-                  </svg>
-                </div>
+                    <!-- Date et heure-->
+                    <div class="row info-date">
+                      <div class="col-8">
+                        <i class="bi bi-calendar-week"></i> 12 avril 2024
+                      </div>
+                      <div class="col-4 text-end">
+                        <i class="bi bi-clock"></i> 20h
+                      </div>
+                    </div><br>
+                    <!-- Artiste et info -->
+                    <div class="row info-artiste">
+                      <div class="col-6"><img class="artist-picture" src="../assets/artists/chloe_alexandra_thompson.jpg"><img class="artist-picture" src="../assets/artists/matthews_edwards.jpg">
+                      </div>
+                      <div class="col-6 text-end lien-info">Plus d'info
+                         <i class="bi bi-chevron-right"></i>
+                      </div>
+                    </div>
+                  </div>
+                </a>
               </div>
             </div>
-          </a>
-        </div>
 
-        <!-- Carte 03 -->
-        <!-- Image, titre et source -->
-        <div class="col carte-vedette">
-          <a href="artwork.html" class="card card-block">
-            <img src="../assets/placeholder-temp.png" class="card-img-top">
+            <!-- Slides -->
+            <div class="swiper-slide">
+              <div class="col carte-vedette">
+                <a href="artwork.html" class="card card-block" id="oeuvre03" onclick="detectionOeuvre(this.id)">
+                  <img src="../assets/artworks/megatouch.jpg" class="card-img-top">
+                  <div class="card-body">
+                    <h3 class="card-title">Mega Touch</h3>
+                    <p class="carte-nom-artiste">Par Håkan Lidbo</p><br>
 
-            <div class="card-body">
-              <h3 class="card-title">Titre de l'oeuvre</h3>
-              <p>Par Lorem Ipsum, Dolor Sit.</p>
-
-              <!-- Date et heure-->
-              <div class="row info-date">
-                <div class="col-8">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="9" height="9" fill="currentColor"
-                    class="bi bi-calendar-week" viewBox="0 0 16 16">
-                    <path
-                      d="M11 6.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zm-3 0a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zm-5 3a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zm3 0a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5z" />
-                    <path
-                      d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5M1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4z" />
-                  </svg> 12 avril 2024
-                </div>
-                <div class="col-4 text-end">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="9" height="9" fill="currentColor" class="bi bi-clock"
-                    viewBox="0 0 16 16">
-                    <path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71z" />
-                    <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16m7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0" />
-                  </svg> 20h
-                </div>
-              </div><br>
-
-              <!-- Artiste et info -->
-              <div class="row info-artiste">
-                <div class="col-3"><img class="artist-picture" src="../assets/profile_picture_placeholder.jpg">
-                </div>
-                <div class="col-9 text-end lien-info">Plus d'info
-                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor"
-                    class="bi bi-chevron-right" viewBox="0 0 16 16">
-                    <path fill-rule="evenodd"
-                      d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708" />
-                  </svg>
-                </div>
+                    <!-- Date et heure-->
+                    <div class="row info-date">
+                      <div class="col-8">
+                        <i class="bi bi-calendar-week"></i> 12 avril 2024
+                      </div>
+                      <div class="col-4 text-end">
+                        <i class="bi bi-clock"></i> 20h
+                      </div>
+                    </div><br>
+                    <!-- Artiste et info -->
+                    <div class="row info-artiste">
+                      <div class="col-6"><img class="artist-picture" src="../assets/artists/hakan_lidbo.jpg">
+                      </div>
+                      <div class="col-6 text-end lien-info">Plus d'info
+                         <i class="bi bi-chevron-right"></i>
+                      </div>
+                    </div>
+                  </div>
+                </a>
               </div>
             </div>
-          </a>
-        </div>
 
-      </div>
-    </div>
+            <!-- Slides -->
+            <div class="swiper-slide">
+              <div class="col carte-vedette">
+                <a href="artwork.html" class="card card-block oeuvre"  id="oeuvre01" onclick="detectionOeuvre(this.id)">
+                  <img src="../assets/artworks/retina.jpg" class="card-img-top">
+                  <div class="card-body">
+                    <h3 class="card-title">Retina</h3>
+                    <p class="carte-nom-artiste">Par Herman Kolgen</p><br>
 
-    <!----------------------------------------------------------------------- SECTION 04 - CARTES - AUTRES OEUVRES ---------------------------------------------------------------->
-    <div class="container section-cartes">
-      <div class="row">
-        <h2>Autres</h2>
-
-        <!-- Carte 01 -->
-        <!-- Image, titre et source -->
-        <div class="col" >
-          <a href="artwork.html" class="card card-block">
-            <img src="../assets/placeholder-temp.png" class="card-img-top autre-oeuvre">
-
-            <div class="card-body">
-              <h3 class="card-title">Titre de l'oeuvre</h3>
-              <p>Par Lorem Ipsum, Dolor Sit.</p>
-
-              <!-- Date et heure-->
-              <div class="row info-date">
-                <div class="col-8">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="9" height="9" fill="currentColor"
-                    class="bi bi-calendar-week" viewBox="0 0 16 16">
-                    <path
-                      d="M11 6.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zm-3 0a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zm-5 3a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zm3 0a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5z" />
-                    <path
-                      d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5M1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4z" />
-                  </svg> 12 avril 2024
-                </div>
-                <div class="col-4 text-end">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="9" height="9" fill="currentColor" class="bi bi-clock"
-                    viewBox="0 0 16 16">
-                    <path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71z" />
-                    <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16m7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0" />
-                  </svg> 20h
-                </div>
-              </div><br>
-
-              <!-- Artiste et info -->
-              <div class="row info-artiste">
-                <div class="col-3"><img class="artist-picture" src="../assets/profile_picture_placeholder.jpg">
-                </div>
-                <div class="col-9 text-end lien-info">Plus d'info
-                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor"
-                    class="bi bi-chevron-right" viewBox="0 0 16 16">
-                    <path fill-rule="evenodd"
-                      d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708" />
-                  </svg>
-                </div>
+                    <!-- Date et heure-->
+                    <div class="row info-date">
+                      <div class="col-8">
+                        <i class="bi bi-calendar-week"></i> 12 avril 2024
+                      </div>
+                      <div class="col-4 text-end">
+                        <i class="bi bi-clock"></i> 20h
+                      </div>
+                    </div><br>
+                    <!-- Artiste et info -->
+                    <div class="row info-artiste">
+                      <div class="col-6"><img class="artist-picture" src="../assets/artists/herman_kolgen.jpg">
+                      </div>
+                      <div class="col-6 text-end lien-info">Plus d'info
+                         <i class="bi bi-chevron-right"></i>
+                      </div>
+                    </div>
+                  </div>
+                </a>
               </div>
             </div>
-          </a>
-        </div>
 
-        <!-- Carte 02 -->
-        <!-- Image, titre et source -->
-        <div class="col-12">
-          <a href="artwork.html" class="card card-block">
-            <img src="../assets/placeholder-temp.png" class="card-img-top autre-oeuvre">
+            <!-- Slides -->
+            <div class="swiper-slide">
+              <div class="col carte-vedette">
+                <a href="artwork.html" class="card card-block" id="oeuvre02" onclick="detectionOeuvre(this.id)">
+                  <img src="../assets/artworks/house-of-moire.jpg" class="card-img-top">
+                  <div class="card-body">
+                    <h3 class="card-title">House of Moiré</h3>
+                    <p class="carte-nom-artiste">Par C. A. Thompson, M. Edwards</p>
 
-            <div class="card-body">
-              <h3 class="card-title">Titre de l'oeuvre</h3>
-              <p>Par Lorem Ipsum, Dolor Sit.</p>
-
-              <!-- Date et heure-->
-              <div class="row info-date">
-                <div class="col-8">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="9" height="9" fill="currentColor"
-                    class="bi bi-calendar-week" viewBox="0 0 16 16">
-                    <path
-                      d="M11 6.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zm-3 0a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zm-5 3a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zm3 0a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5z" />
-                    <path
-                      d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5M1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4z" />
-                  </svg> 12 avril 2024
-                </div>
-                <div class="col-4 text-end">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="9" height="9" fill="currentColor" class="bi bi-clock"
-                    viewBox="0 0 16 16">
-                    <path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71z" />
-                    <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16m7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0" />
-                  </svg> 20h
-                </div>
-              </div><br>
-
-              <!-- Artiste et info -->
-              <div class="row info-artiste">
-                <div class="col-3"><img class="artist-picture" src="../assets/profile_picture_placeholder.jpg">
-                </div>
-                <div class="col-9 text-end lien-info">Plus d'info
-                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor"
-                    class="bi bi-chevron-right" viewBox="0 0 16 16">
-                    <path fill-rule="evenodd"
-                      d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708" />
-                  </svg>
-                </div>
+                    <!-- Date et heure-->
+                    <div class="row info-date">
+                      <div class="col-8">
+                        <i class="bi bi-calendar-week"></i> 12 avril 2024
+                      </div>
+                      <div class="col-4 text-end">
+                        <i class="bi bi-clock"></i> 20h
+                      </div>
+                    </div><br>
+                    <!-- Artiste et info -->
+                    <div class="row info-artiste">
+                      <div class="col-6"><img class="artist-picture" src="../assets/artists/chloe_alexandra_thompson.jpg"><img class="artist-picture" src="../assets/artists/matthews_edwards.jpg">
+                      </div>
+                      <div class="col-6 text-end lien-info">Plus d'info
+                         <i class="bi bi-chevron-right"></i>
+                      </div>
+                    </div>
+                  </div>
+                </a>
               </div>
             </div>
-          </a>
-        </div>
 
-        <!-- Carte 03 -->
-        <!-- Image, titre et source -->
-        <div class="col-12">
-          <a href="artwork.html" class="card card-block">
-            <img src="../assets/placeholder-temp.png" class="card-img-top autre-oeuvre">
+            <!-- Slides -->
+            <div class="swiper-slide">
+              <div class="col carte-vedette">
+                <a href="artwork.html" class="card card-block" id="oeuvre03" onclick="detectionOeuvre(this.id)">
+                  <img src="../assets/artworks/megatouch.jpg" class="card-img-top">
+                  <div class="card-body">
+                    <h3 class="card-title">Mega Touch</h3>
+                    <p class="carte-nom-artiste">Par Håkan Lidbo</p><br>
 
-            <div class="card-body">
-              <h3 class="card-title">Titre de l'oeuvre</h3>
-              <p>Par Lorem Ipsum, Dolor Sit.</p>
-
-              <!-- Date et heure-->
-              <div class="row info-date">
-                <div class="col-8">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="9" height="9" fill="currentColor"
-                    class="bi bi-calendar-week" viewBox="0 0 16 16">
-                    <path
-                      d="M11 6.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zm-3 0a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zm-5 3a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zm3 0a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5z" />
-                    <path
-                      d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5M1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4z" />
-                  </svg> 12 avril 2024
-                </div>
-                <div class="col-4 text-end">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="9" height="9" fill="currentColor" class="bi bi-clock"
-                    viewBox="0 0 16 16">
-                    <path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71z" />
-                    <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16m7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0" />
-                  </svg> 20h
-                </div>
-              </div><br>
-
-              <!-- Artiste et info -->
-              <div class="row info-artiste">
-                <div class="col-3"><img class="artist-picture" src="../assets/profile_picture_placeholder.jpg">
-                </div>
-                <div class="col-9 text-end lien-info">Plus d'info
-                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor"
-                    class="bi bi-chevron-right" viewBox="0 0 16 16">
-                    <path fill-rule="evenodd"
-                      d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708" />
-                  </svg>
-                </div>
+                    <!-- Date et heure-->
+                    <div class="row info-date">
+                      <div class="col-8">
+                        <i class="bi bi-calendar-week"></i> 12 avril 2024
+                      </div>
+                      <div class="col-4 text-end">
+                        <i class="bi bi-clock"></i> 20h
+                      </div>
+                    </div><br>
+                    <!-- Artiste et info -->
+                    <div class="row info-artiste">
+                      <div class="col-6"><img class="artist-picture" src="../assets/artists/hakan_lidbo.jpg">
+                      </div>
+                      <div class="col-6 text-end lien-info">Plus d'info
+                         <i class="bi bi-chevron-right"></i>
+                      </div>
+                    </div>
+                  </div>
+                </a>
               </div>
-            </div>
-          </a>
+            </div> 
+
+          </div>
         </div>
 
-      </div>
-    </div>
-    
+        <!----------------------------------------------------------------------- SECTION 04 - CARTES - AUTRES OEUVRES ---------------------------------------------------------------->
+        <div class="container mb-4">
+          <div class="row">
+            <h2 class="mt-2 mb-0">Autres oeuvres et performances</h2>
+            <div class="col">
+
+              <!-- Carte 01 -->
+              <!-- Image, titre et source -->
+              <div class="col-12">
+                <a href="artwork.html" class="card card-block" id="oeuvre04" onclick="detectionOeuvre(this.id)">
+                  <img src="../assets/artworks/pixelbloom.jpg" class="card-img-top autre-oeuvre">
+
+                  <div class="card-body">
+                    <h3 class="card-title">Pixelbloom - Timeless Butterflies</h3>
+                    <p>Par Artechouse</p><br>
+
+                    <!-- Date et heure-->
+                    <div class="row info-date">
+                      <div class="col-8">
+                        <i class="bi bi-calendar-week"></i> 12 avril 2024
+                      </div>
+                      <div class="col-4 text-end">
+                         <i class="bi bi-clock"></i>20h
+                      </div>
+                    </div><br>
+
+                    <!-- Artiste et info -->
+                    <div class="row info-artiste">
+                      <div class="col-3"><img class="artist-picture" src="../assets/artists/artechouse.jpg">
+                      </div>
+                      <div class="col-9 text-end lien-info">Plus d'info
+                          <i class="bi bi-chevron-right"></i>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </div>
+
+
+              <!-- Carte 02 -->
+              <!-- Image, titre et source -->
+              <div class="col-12">
+                <a href="artwork.html" class="card card-block" id="oeuvre05" onclick="detectionOeuvre(this.id)">
+                  <img src="../assets/artworks/projet_bretez.jpg" class="card-img-top autre-oeuvre">
+
+                  <div class="card-body">
+                    <h3 class="card-title">Projet Bretez</h3>
+                    <p>Par Mylène Pardoen</p><br>
+
+                    <!-- Date et heure-->
+                    <div class="row info-date">
+                      <div class="col-8">
+                        <i class="bi bi-calendar-week"></i> 12 avril 2024
+                      </div>
+                      <div class="col-4 text-end">
+                         <i class="bi bi-clock"></i>20h
+                      </div>
+                    </div><br>
+
+                    <!-- Artiste et info -->
+                    <div class="row info-artiste">
+                      <div class="col-3"><img class="artist-picture" src="../assets/artists/mylene_pardoen.jpg">
+                      </div>
+                      <div class="col-9 text-end lien-info">Plus d'info
+                          <i class="bi bi-chevron-right"></i>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </div>
+
+              <!-- Carte 03 -->
+              <!-- Image, titre et source -->
+              <div class="col-12">
+                <a href="artwork.html" class="card card-block" id="oeuvre06" onclick="detectionOeuvre(this.id)">
+                  <img src="../assets/artworks/the_fourth_wall.jpg" class="card-img-top autre-oeuvre">
+
+                  <div class="card-body">
+                    <h3 class="card-title">The Fourth Wall</h3>
+                    <p>Par Mahboobeh Kalaee</p><br>
+
+                    <!-- Date et heure-->
+                    <div class="row info-date">
+                      <div class="col-8">
+                        <i class="bi bi-calendar-week"></i> 12 avril 2024
+                      </div>
+                      <div class="col-4 text-end">
+                         <i class="bi bi-clock"></i>20h
+                      </div>
+                    </div><br>
+
+                    <!-- Artiste et info -->
+                    <div class="row info-artiste">
+                      <div class="col-3"><img class="artist-picture" src="../assets/artists/mahboobeh_kalaee.png">
+                      </div>
+                      <div class="col-9 text-end lien-info">Plus d'info
+                          <i class="bi bi-chevron-right"></i>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </div>
+              
+
+  
+            </div>
+          </div>
+        </div>
 
 
   </main>
@@ -408,11 +430,12 @@
       </div>
       </div>
     </footer>
-
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
       crossorigin="anonymous"></script>
-    <script src="/joshua-melody-app-festival-art/js/script.js"></script>
+    <script src="../js/script.js"></script>
+    <script src="../js/scriptArt.js"></script>
 </body>
 
 </html>
