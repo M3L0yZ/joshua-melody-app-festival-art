@@ -3,7 +3,7 @@
 # Styles Généraux 
 ---------------------------------------------------------*/
 body {
-    min-height: 4000px;
+    min-height: 5000px;
     margin: 0;
     padding: 0;
     background-image: url('../assets/C-3.svg'), linear-gradient(var(--lightgreen), var(--dark));
@@ -109,7 +109,7 @@ body {
   .section-testimonials {
     display: flex;
     position: absolute;
-    top: 100vh;
+    top: 200vh;
     width: 100%;
     height: auto;
     background-color: white;
@@ -141,6 +141,27 @@ body {
     font-size: 2vw;
   }
 
+        /*---------------------------------------------------------- 
+  # Voir Plus
+  ----------------------------------------------------------*/
+  .section-voir-plus {
+    display: flex;
+    position: absolute;
+    top: 130vh;
+    width: 100%;
+    height: auto;
+    background-color: white;
+  }
+
+  .section-voir-plus h2 {
+    text-align: center;
+  }
+
+  .swiper-screenshots img {
+    border-radius: 10px;
+    height: 25vw;
+  }
+
 
       /*---------------------------------------------------------- 
   # FAQ  
@@ -149,7 +170,7 @@ body {
   .section-faq {
     display: flex;
     position: absolute;
-    top: 200vh;
+    top: 320vh;
     width: 100%;
     height: auto;
     background-color: white;
@@ -162,7 +183,7 @@ body {
   .infolettre {
     display: flex;
     position: absolute;
-    top: 250vh;
+    top: 375vh;
     width: 100%;
     height: auto;
     background-image: url("../assets/img_lp/bg_1.jpg");
