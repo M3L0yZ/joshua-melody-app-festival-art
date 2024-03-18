@@ -1,0 +1,194 @@
+
+/*--------------------------------------------------------- 
+# Styles Généraux 
+---------------------------------------------------------*/
+body {
+    min-height: 5000px;
+    margin: 0;
+    padding: 0;
+    background-image: url('../assets/C-3.svg'), linear-gradient(var(--lightgreen), var(--dark));
+    background-size: 75vh, cover;
+    background-position: top 100px center, center;
+    background-repeat: no-repeat;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+  }
+  
+  nav {
+      background-color: var(--light);
+  }
+  
+  .navbar {
+    font-family: var(--miriamlibre);
+    color: var(--dark);
+  }
+  
+  .logo {
+    width: 40px;
+  }
+  
+  .test {
+    height: 2000px;
+    background-color: #000000;
+  }
+  
+  .pied {
+    color: var(--light);
+    background-color: var(--green);
+    width: 100vw;
+    height: 20vh;
+    display: flex;
+    position: absolute;
+    bottom: 0;
+  }
+  
+  /*---------------------------------------------------------- 
+  # Section Hero  
+  ----------------------------------------------------------*/
+  
+  .hero {
+    display: flex;
+    position: absolute;
+    top: 150px;
+    width: 100%;
+    height: auto;
+  }
+  
+  .h1 {
+    font-size: 4vw;
+    color: #000000;
+  }
+  
+  .photo {
+    background-repeat: no-repeat;
+    background-color: #000000;
+    width: 100%;
+    max-width: 350px;
+    aspect-ratio: 5/9;
+    border-radius: 25px;
+  }
+  
+  button {
+    background-color: var(--green);
+    margin-bottom: 10px;
+  }
+
+  iframe {
+    flex-grow: 1; border: none; margin: 0; padding: 0;
+  }
+
+
+
+    /*---------------------------------------------------------- 
+  # Fonctionnalités  
+  ----------------------------------------------------------*/
+
+  .section-features {
+    display: flex;
+    position: absolute;
+    top: 115vh;
+    width: 100%;
+    height: auto;
+    background-color: white;
+  }
+
+  .card-deck {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+  }
+  
+  .card {
+    flex: 1 0 auto;
+  }
+
+      /*---------------------------------------------------------- 
+  # Testimonials  
+  ----------------------------------------------------------*/
+  .section-testimonials {
+    display: flex;
+    position: absolute;
+    top: 200vh;
+    width: 100%;
+    height: auto;
+    background-color: white;
+  }
+
+  .testi img {
+    object-fit: cover;
+  }
+
+  .testi img.num-2 {
+    object-fit: cover;
+    object-position: 0 0px;
+  }
+
+  .testi img.num-6 {
+    object-fit: cover;
+    object-position: 0 -40px;
+  }
+
+  .test-img {
+    height: 15vh;
+  }
+
+  i {
+    font-size: 2vw;
+  }
+
+  .testi i {
+    font-size: 2vw;
+  }
+
+        /*---------------------------------------------------------- 
+  # Voir Plus
+  ----------------------------------------------------------*/
+  .section-voir-plus {
+    display: flex;
+    position: absolute;
+    top: 130vh;
+    width: 100%;
+    height: auto;
+    background-color: white;
+  }
+
+  .section-voir-plus h2 {
+    text-align: center;
+  }
+
+  .swiper-screenshots img {
+    border-radius: 10px;
+    height: 25vw;
+  }
+
+
+      /*---------------------------------------------------------- 
+  # FAQ  
+  ----------------------------------------------------------*/
+
+  .section-faq {
+    display: flex;
+    position: absolute;
+    top: 320vh;
+    width: 100%;
+    height: auto;
+    background-color: white;
+  }
+
+      /*---------------------------------------------------------- 
+  # Info-lettre
+  ----------------------------------------------------------*/
+
+  .infolettre {
+    display: flex;
+    position: absolute;
+    top: 375vh;
+    width: 100%;
+    height: auto;
+    background-image: url("../assets/img_lp/bg_1.jpg");
+  }
+
+  .infolettre h2 {
+    color: var(--light);
+  }
